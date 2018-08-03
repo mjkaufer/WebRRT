@@ -8,4 +8,6 @@ After we find the path to the goal, it's time to smooth it out. Random nodes are
 
 ## TODO
 * Have an animated robot follow the path
+	* If an animated robot is following path, let it function as a dynamic starting point
+		* If a obstacle is placed, the robot recalculates its RRT and adjusts accordingly
 * Add support for moving the start & end points
