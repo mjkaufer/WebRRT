@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>WebRRT</title>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="controls">
+			<p>Draw obstacles by clicking any two points</p>
+			<p>Shift-click an obstacle to remove it</p>
+			<p>To start path planning, click <a href="#" onclick="rrt.startSearching()">here!</a></p>
+			<p>Check out the repo (+ a description) <a href="https://github.com/mjkaufer/WebRRT">here!</a></p>
+		</div>
+
+		<svg id="rrt"></svg>
+
+		<script src="js/two.js"></script>
+		<script src="js/node.js"></script>
+		<script src="js/obstacle.js"></script>
+		<script src="js/rrt.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
