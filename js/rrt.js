@@ -93,7 +93,7 @@ class RRT {
 		if (this.nodeList.length === 0) {
 			this.drawNode(node)
 			this.nodeList.push(node)
-			return
+			return undefined
 		}
 
 		// closest node w/out collision
@@ -149,7 +149,12 @@ class RRT {
 		// define a synonym because setInterval overrides this scope
 		let self = this
 		let interval = setInterval(function() {
-			let addedNode = rrt.addNode(rrt.randomPoint())
+			let addedNode = undefined
+			do {
+				// if an invalid point is picked, we don't have to wait x milliseconds to try again
+				addedNode = rrt.addNode(rrt.randomPoint())
+			} while (addedNode === undefined)
+
 			if (addedNode === self.goalNode) {
 				clearInterval(interval)
 				self.finishSearch()
