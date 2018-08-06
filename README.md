@@ -7,6 +7,7 @@ RRT generates a tree of valid movements, as its name suggests. Random points in 
 After we find the path to the goal, it's time to smooth it out. Random nodes are compared and if a line can be drawn between these nodes without any collisions, any nodes beteen these nodes are removed.
 
 ## TODO
+* Clicking the start button multiple times doesn't disrupt simulation
 * Have an animated robot follow the path
 	* If an animated robot is following path, let it function as a dynamic starting point
 		* If a obstacle is placed, the robot recalculates its RRT and adjusts accordingly
