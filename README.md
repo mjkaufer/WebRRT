@@ -1,6 +1,8 @@
 # WebRRT
 This is a web-based visualization of the rapidly-exploring random tree algorithm (RRT)
 
+![Example of WebRRT in action](https://i.imgur.com/uki4aft.gif)
+
 ## How does it work?
 RRT generates a tree of valid movements, as its name suggests. Random points in space are picked, the closest node to said point is found, and if the points don't have a collision, they are connected! (Unless the points are too far away, in which case the point in the tree connects to a projection of the random point). 9/10 times when randomly sampling, the goal destination is picked; this lets us try and connect our current tree to the goal.
 
